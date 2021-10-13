@@ -12,37 +12,38 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 ```javascript
 module.exports = {
     app: {
-        px: 'a!', // prefix
-        token: '', // discord bot token
-        playing: 'with Kyoko ❤️ | a!help', // status
-        color: '#c67d9a', // embed color
+        px: 'a!',
+        token: '',
+        playing: 'with Kyoko ❤️ | a!help',
+        color: '#c67d9a',
     },
 
     opt: {
-        DJ: {  // dj only commands
+        DJ: {
             enabled: false,
             roleName: 'DJ',
             commands: ['back', 'clear', 'loop', 'pause', 'resume', 'seek', 'shuffle', 'skip', 'stop', 'volume']
         },
-        MOD: { // moderator only commands
+        MOD: {
             enabled: true,
-            commands: ['mute', 'unmute']
+            commands: ['mute', 'unmute', 'say']
         },
-        ADMN: { // admin only commands
+        ADMN: {
             enabled: true,
-            commands: ['kick', 'ban']
+            commands: ['kick', 'ban', 'purge']
         },
-        maxVol: 100, // max music volume
+        maxVol: 100,
         discordPlayer: {}
     },
 
-    key: { // third party api
+    key: {
         rapidAPI: '',
         saucenaoAPI: '',
-        deepaiAPI: '',
-        imgbbAPI: '',
+        deepaiAPIKey: '',
+        imgbbAPIKey: '',
     }
 };
+
 
 ```
 
@@ -75,3 +76,5 @@ module.exports = {
 - [moment | ^2.29.1](https://www.npmjs.com/package/moment)
 - [mal-scraper | ^2.11.3](https://www.npmjs.com/package/mal-scraper)
 - [weather-js | ^2.0.0](https://www.npmjs.com/package/weather-js)
+- [is-image-url | ^1.1.8](https://www.npmjs.com/package/is-image-url)
+- [deepai | ^1.0.17](https://www.npmjs.com/package/deepai)
