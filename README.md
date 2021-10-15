@@ -10,11 +10,11 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 
 # Config
 ```javascript
+// Rich Presence Move To ./events/ready.js
 module.exports = {
     app: {
         px: 'a!',
         token: '',
-        playing: 'with Kyoko ❤️ | a!help',
         color: '#c67d9a',
     },
 
@@ -43,6 +43,7 @@ module.exports = {
         imgbbAPIKey: '',
     }
 };
+
 
 
 ```
@@ -78,3 +79,4 @@ module.exports = {
 - [weather-js | ^2.0.0](https://www.npmjs.com/package/weather-js)
 - [is-image-url | ^1.1.8](https://www.npmjs.com/package/is-image-url)
 - [deepai | ^1.0.17](https://www.npmjs.com/package/deepai)
+- [fxc7-tiktok | ^1.0.2](https://www.npmjs.com/package/fxc7-tiktok)
