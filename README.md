@@ -51,7 +51,6 @@ module.exports = {
 ## Credit
 - [ZerioDev](https://github.com/ZerioDev/Music-bot)
 - [Reynadi531](https://github.com/Reynadi531/api-covid19-indonesia-v2)
-- [exilvm](https://github.com/exilvm/sauceBot)
 - [bypass.vip](https://github.com/bypass-vip/bypass.vip)
 - [goqr.me](https://goqr.me/api/)
 - [Henrik-3](https://github.com/Henrik-3/unofficial-valorant-api)
@@ -78,3 +77,4 @@ module.exports = {
 - [is-image-url | ^1.1.8](https://www.npmjs.com/package/is-image-url)
 - [deepai | ^1.0.17](https://www.npmjs.com/package/deepai)
 - [fxc7-tiktok | ^1.0.2](https://www.npmjs.com/package/fxc7-tiktok)
+- [sagiri | ^3.1.1](https://www.npmjs.com/package/sagiri)
