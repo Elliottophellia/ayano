@@ -1,10 +1,10 @@
 {
-  "name": "music-bot",
+  "name": "ayano",
   "main": "main.js",
   "author": "ZerioDev",
-  "version": "6.0.0",
-  "repository": "https://github.com/ZerioDev/Music-bot.git",
-  "description": "A complete code to download for a cool Discord music bot.",
+  "version": "1.0.0",
+  "repository": "https://github.com/Eilaluth/Ayano.git",
+  "description": "LYGC+ Official Discord Bot, Sugiura Ayano.",
   "scripts": {
     "start": "node main.js"
   },
