@@ -3,6 +3,7 @@ module.exports = {
         px: 'a!',
         token: '',
         color: '#c67d9a',
+        playing: 'Ayano ❤️ Kyoko'
     },
 
     opt: {
