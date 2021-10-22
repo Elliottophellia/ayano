@@ -10,25 +10,25 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 
 # Config
 ```javascript
-// Rich Presence Move To ./events/ready.js
 module.exports = {
     app: {
         px: 'a!',
         token: '',
         color: '#c67d9a',
+        playing: 'Ayano ❤️ Kyoko'
     },
 
     opt: {
-        DJ: {
+        DJ: {   // dj only music commands
             enabled: false,
             roleName: 'DJ',
             commands: ['back', 'clear', 'loop', 'pause', 'resume', 'seek', 'shuffle', 'skip', 'stop', 'volume']
         },
-        MOD: {
+        MOD: {  // moderator only commands
             enabled: true,
             commands: ['mute', 'unmute', 'say']
         },
-        ADMN: {
+        ADMN: { // admin only commands
             enabled: true,
             commands: ['kick', 'ban', 'purge']
         },
