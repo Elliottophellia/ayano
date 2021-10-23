@@ -10,7 +10,7 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 
 # Server Status
 
-Website Monitoring to check if API server is down or not<br/>
+Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
 # Config
