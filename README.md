@@ -8,6 +8,11 @@ Ayano is the current Student Council Vice President who is known to be secretly 
 
 Ayano has a tsundere type personality and this shows when she gets embarrassed around Kyōko. Although as of YuruYuri San☆Hai!, Ayano has started getting confident and more honest with her feelings.
 
+# Server Status
+
+Website Monitoring to check if API server is down or not<br/>
+http://status.rei.my.id/
+
 # Config
 ```javascript
 module.exports = {
