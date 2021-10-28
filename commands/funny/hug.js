@@ -13,7 +13,7 @@ module.exports = {
       return message.reply("Please mention someone to hug!");
     if (message.mentions.users.first()) {
       axios
-        .get("http://api.rei.my.id/api/hug/")
+        .get("https://api.rei.my.id/api/hug/")
         .then((res) => {
           let embed = new MessageEmbed()
             .setColor(client.config.app.color)
