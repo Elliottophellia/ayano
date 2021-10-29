@@ -15,8 +15,8 @@ http://status.rei.my.id/
 
 # To do
 
-- add notice to include agent name when use valagent command
-- change wheater command from using args[1] to args[1].join(" ")
+- [ ] add notice to include agent name when use valagent command
+- [ ] change wheater command from using args[1] to args[1].join(" ")
 
 # Config
 ```javascript
