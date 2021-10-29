@@ -13,6 +13,11 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
+# To do
+
+- add notice to include agent name when use valagent command
+- change wheater command from using args[1] to args[1].join(" ")
+
 # Config
 ```javascript
 module.exports = {
