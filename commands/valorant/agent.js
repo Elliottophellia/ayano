@@ -8,6 +8,7 @@ module.exports = {
   utilisation: "{prefix}valagent",
 
   async execute(client, message, args) {
+    if (!args[0]) return message.channel.send('Please input agent name!');
     let agent = args[0]
     agent = agent.toLowerCase()
     if (agent === 'breach'
