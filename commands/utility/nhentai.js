@@ -25,7 +25,7 @@ module.exports = {
                 .addField('Categories :', `${data.tag_table.categories || 'none'}`,true)
                 .addField('Pages :', `${data.number_pages || 'none'}`,true)
                 .addField('Uploaded :', `${data.uploaded || 'none'}`,true)
-                .addField('Download:', `[ZIP](https://mangadl.herokuapp.com/download/nhentai/${data.id}/zip)`,false)
+                .addField('Download:', `[ZIP](https://mangadl.herokuapp.com/download/nhentai/${data.id}/zip) - [CBZ](https://mangadl.herokuapp.com/download/nhentai/${data.id}/cbz)`,false)
                 .setImage(data.images.cover)
                 message.channel.send({ embeds: [embed] });
         })
