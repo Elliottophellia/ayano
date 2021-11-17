@@ -22,7 +22,7 @@ module.exports = {
 
     if(!args[1]) return message.channel.send("Enter a location to search for.");
 
-    weather.find({search: args[1], degreeType: degree}, function(err, result) {
+    weather.find({search: args[1].join(" "), degreeType: degree}, function(err, result) {
       try{
 
         let embed = new MessageEmbed()
