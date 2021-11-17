@@ -9,9 +9,11 @@ module.exports = {
     description: 'Play fight ame on discord',
 
     async execute(client, message, args){
+        const mess = message;
+        const opps = message.mentions.users.first();
         await Fight({
-            message: message,
-            opponent: message.mentions.users.first(),
+            message: mess,
+            opponent: opps,
             embed: {
                 title: 'Fight Game',
                 color: client.config.app.color,
