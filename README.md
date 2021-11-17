@@ -17,7 +17,7 @@ http://status.rei.my.id/
 
 - [ ] add notice to include agent name when use valagent command
 - [ ] change wheater command from using args[1] to args[1].join(" ")
-- [ ] idk why but weky module is kinda buging in my vps
+- [x] idk why but weky module is kinda buging in my vps (the bug is you can't add mention user directly but make it to be variable first )
 - [ ] add cbz format for nhentai download
 
 please someone contribute im to lazy to do this
