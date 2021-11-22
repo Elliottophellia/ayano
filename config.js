@@ -34,5 +34,6 @@ module.exports = {
         saucenaoAPI: '',
         deepaiAPIKey: '',
         imgbbAPIKey: '',
+        chiyomeAPIKey: ''
     }
 };
