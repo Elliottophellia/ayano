@@ -2,7 +2,7 @@
   "name": "ayano",
   "main": "main.js",
   "author": "Eilaluth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/Eilaluth/Ayano.git",
   "description": "LYGC+ Official Discord Bot, Sugiura Ayano.",
   "scripts": {
