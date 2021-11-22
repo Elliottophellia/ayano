@@ -35,21 +35,26 @@ module.exports = {
     },
 
     opt: {
-        DJ: {   // dj only music commands
+        DJ: {
             enabled: false,
             roleName: 'DJ',
             commands: ['back', 'clear', 'loop', 'pause', 'resume', 'seek', 'shuffle', 'skip', 'stop', 'volume']
         },
-        MOD: {  // moderator only commands
+        MOD: {
             enabled: true,
             commands: ['mute', 'unmute', 'say']
         },
-        ADMN: { // admin only commands
+        ADMN: {
             enabled: true,
             commands: ['kick', 'ban', 'purge']
         },
         maxVol: 100,
-        discordPlayer: {}
+        discordPlayer: {            
+            ytdlOptions: {
+            quality: 'highestaudio',
+            highWaterMark: 1 << 25
+            }
+        }
     },
 
     key: {
@@ -57,10 +62,9 @@ module.exports = {
         saucenaoAPI: '',
         deepaiAPIKey: '',
         imgbbAPIKey: '',
+        chiyomeAPIKey: ''
     }
 };
-
-
 
 ```
 
