@@ -13,7 +13,7 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
-# To do
+# 1.0.1 To do
 
 - [x] add notice to include agent name when use valagent command
 - [x] change wheater command from using args[1] to args.slice(1).join(' ')
@@ -21,6 +21,7 @@ http://status.rei.my.id/
 - [x] add cbz format for nhentai download
 - [x] shortlink for nhentai download powered by https://chiyome.ninja/ 
 - [ ] update kasu nhentai version
+- [ ] fix unidentified bug
 
 please someone contribute im to lazy to do this
 
