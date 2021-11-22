@@ -16,9 +16,10 @@ http://status.rei.my.id/
 # To do
 
 - [x] add notice to include agent name when use valagent command
-- [x] change wheater command from using args[1] to args[1].join(" ")
+- [x] change wheater command from using args[1] to args.slice(1).join(' ')
 - [x] idk why but weky module is kinda buging in my vps (the bug is you can't add mention user directly but make it to be variable first )
 - [x] add cbz format for nhentai download
+- [x] shortlink for nhentai download powered by https://chiyome.ninja/ 
 - [ ] update kasu nhentai version
 
 please someone contribute im to lazy to do this
