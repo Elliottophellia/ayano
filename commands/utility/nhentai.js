@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const isUrl = require('is-valid-http-url');
 const API = require('kasu.nhentaiapi.js');
 const axios = require('axios');
 const api = new API();
