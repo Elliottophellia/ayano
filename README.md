@@ -22,6 +22,7 @@ http://status.rei.my.id/
 - [x] shortlink for nhentai download powered by https://chiyome.ninja/ 
 - [ ] update kasu nhentai version
 - [ ] fix unidentified bug
+- [ ] fix music command bug can't play anything
 
 please someone contribute im to lazy to do this
 
