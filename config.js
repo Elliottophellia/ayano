@@ -24,7 +24,12 @@ module.exports = {
         discordPlayer: {            
             ytdlOptions: {
             quality: 'highestaudio',
-            highWaterMark: 1 << 25
+            highWaterMark: 1 << 25,
+            filter: 'audioonly',
+            requestOptions: {
+            headers: {
+            cookie: YOUTUBE_LOGIN_COOKIE,
+            }
             }
         }
     },
