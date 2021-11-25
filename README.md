@@ -23,6 +23,7 @@ http://status.rei.my.id/
 - [ ] update kasu nhentai version
 - [ ] fix unidentified bug
 - [ ] fix music command bug can't play anything
+- [ ] sync my music command to [ZerioDev](https://github.com/ZerioDev/Music-bot) new update
 
 please someone contribute im to lazy to do this
 
