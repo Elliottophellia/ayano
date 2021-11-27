@@ -16,23 +16,38 @@ module.exports = {
     var id = getYouTubeID(args[0]);
     var options = {
         method: 'GET',
-        url: 'https://llsc12.ml/api/v1/getInfo/',
+        url: 'http://youtube.rei.my.id/api/v1/getInfo/',
         params: {url: `${id}`},
       };
       axios.request(options)
       .then(function (response) {
-          let tamnel = '';
-          response.data.videoDetails.thumbnails.forEach(al => {
-            console.log(al)
-            tamnel += `${al.url}`;
+        axios({
+          method: 'post',
+          url: 'https://chiyome.ninja/api/url/add',
+          headers: {
+                  'Authorization': `Token ${client.config.key.chiyomeAPIKey}`,
+                  'Content-Type': 'application/json'
+          },
+          data: {
+                  "url": `http://youtube.rei.my.id/api/v1/download?url=${id}`
+          }
+          })
+          .then(function (responsx) { 
+            let tamnel = '';
+            response.data.videoDetails.thumbnails.forEach(al => {
+              tamnel += `${al.url}`;
+            });
+            const embed = new MessageEmbed();
+            embed.setTitle('**'+response.data.videoDetails.title+'**')
+            embed.setThumbnail(response.data.videoDetails.author.thumbnails[0].url)
+            embed.addField(`**❱ DOWNLOAD**`,`**[MP4](${responsx.data.short})**`, true);
+            embed.setImage(response.data.videoDetails.thumbnails[1].url)
+            embed.setColor(client.config.app.color);
+            message.channel.send({ embeds: [embed] });
+          } )
+          .catch(function (errox) {
+            console.log(errox);
           });
-          const embed = new MessageEmbed();
-          embed.setTitle('**'+response.data.videoDetails.title+'**')
-          embed.setThumbnail(response.data.videoDetails.author.thumbnails[0].url)
-          embed.addField(`**❱ DOWNLOAD**`,`**[VIDEO](https://llsc12.ml/api/v1/download?url=${id})**`, true);
-          embed.setImage(response.data.videoDetails.thumbnails[1].url)
-          embed.setColor(client.config.app.color);
-          message.channel.send({ embeds: [embed] });
       })
       .catch(function (error) {
           console.error(error);
