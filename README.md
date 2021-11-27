@@ -21,9 +21,8 @@ http://status.rei.my.id/
 - [x] add cbz format for nhentai download
 - [x] shortlink for nhentai download powered by https://chiyome.ninja/ 
 - [ ] update kasu nhentai version
-- [ ] fix unidentified bug
-- [ ] fix music command bug can't play anything
-- [ ] sync my music command to [ZerioDev](https://github.com/ZerioDev/Music-bot) new update
+- [x] fix music command bug can't play anything
+- [x] sync my music command to [ZerioDev](https://github.com/ZerioDev/Music-bot) new update
 
 please someone contribute im to lazy to do this
 
