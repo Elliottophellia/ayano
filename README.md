@@ -19,10 +19,12 @@ http://status.rei.my.id/
 - [x] change wheater command from using args[1] to args.slice(1).join(' ')
 - [x] idk why but weky module is kinda buging in my vps (the bug is you can't add mention user directly but make it to be variable first )
 - [x] add cbz format for nhentai download
-- [x] shortlink for nhentai download powered by https://chiyome.ninja/ 
-- [ ] update kasu nhentai version
+- [x] shortlink for nhentai download powered by https://chiyome.ninja/ (add it to other download as well)
 - [x] fix music command bug can't play anything
 - [x] sync my music command to [ZerioDev](https://github.com/ZerioDev/Music-bot) new update
+- [ ] kasu.nhentaiapi.js removed and changed to simple-nhentai
+- [ ] fix tiktok downloader or change it to other function
+- [ ] fix youtube mp3 downloader or change it to other function
 
 please someone contribute im to lazy to do this
 
@@ -656,7 +658,7 @@ List of commands that Sugiura ayano have
 - [discord-gamecord | ^2.0.0](https://www.npmjs.com/package/discord-gamecord)
 - [get-youtube-id | ^1.0.1](https://www.npmjs.com/package/get-youtube-id)
 - [fbvideos | ^1.0.2](https://www.npmjs.com/package/fbvideos)
-- [kasu.nhentaiapi.js | ^3.0.1](https://www.npmjs.com/package/kasu.nhentaiapi.js)
+- [simple-nhentai | ^1.0.5](https://www.npmjs.com/package/simple-nhentai)
 - [valorant-fetch": ^3.1.1](https://www.npmjs.com/package/valorant-fetch)
 - [moment | ^2.29.1](https://www.npmjs.com/package/moment)
 - [mal-scraper | ^2.11.3](https://www.npmjs.com/package/mal-scraper)
