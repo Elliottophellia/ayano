@@ -28,9 +28,10 @@ module.exports = {
             filter: 'audioonly',
             requestOptions: {
             headers: {
-            cookie: YOUTUBE_LOGIN_COOKIE,
+            cookie: YOUTUBE_LOGIN_COOKIE
+             }
             }
-            }
+          }
         }
     },
 
