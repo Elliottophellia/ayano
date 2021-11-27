@@ -673,7 +673,3 @@ List of commands that Sugiura ayano have
 - [deepai | ^1.0.17](https://www.npmjs.com/package/deepai)
 - [fxc7-tiktok | ^1.0.2](https://www.npmjs.com/package/fxc7-tiktok)
 - [sagiri | ^3.1.1](https://www.npmjs.com/package/sagiri)
-
-# Note
-kasu.nhentaiapi.js issued -> change "main": "./lib/main.js", to "main": "./lib/main.min.js", <br/>
-https://github.com/IchimakiKasura/kasu.nhentaiapi.js/issues/3
