@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 
 module.exports = {
     name: 'nowplaying',
@@ -10,7 +10,7 @@ module.exports = {
     execute(client, message) {
         const queue = player.getQueue(message.guild.id);
 
-        if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}...`);
+        if (!queue || !queue.playing) return message.channel.send(`No music currently playing ${message.author}... try again ? ❌`);
 
         const track = queue.current;
 
@@ -29,6 +29,14 @@ module.exports = {
 
         embed.setTimestamp();
 
-        message.channel.send({ embeds: [embed] });
+        const saveButton = new MessageButton();
+
+        saveButton.setLabel('Save this track');
+        saveButton.setCustomId('saveTrack');
+        saveButton.setStyle('SUCCESS');
+
+        const row = new MessageActionRow().addComponents(saveButton);
+
+        message.channel.send({ embeds: [embed], components: [row] });
     },
 };
