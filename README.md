@@ -27,6 +27,7 @@ http://status.rei.my.id/
 - [x] kasu.nhentaiapi.js removed and changed to simple-nhentai
 - [x] fix tiktok downloader or change it to other function
 - [x] fix youtube mp3 downloader or change it to other function
+- [ ] fix facebook downloader or change it to other function
 
 # Config
 ```javascript
