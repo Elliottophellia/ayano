@@ -1,7 +1,8 @@
 const { MessageEmbed } = require("discord.js");
-const API = require('kasu.nhentaiapi.js');
+const nhentaiApi = require("simple-nhentai").default;
+const moment = require("moment");
 const axios = require('axios');
-const api = new API();
+const isUrl = require('is-valid-http-url');
 
 module.exports = {
         name: "nhentai",
@@ -13,7 +14,9 @@ module.exports = {
         async execute(client, message, args) {
                 if (!message.channel.nsfw) return message.channel.send("You only can use this command in NSFW channel ❤️.");
                 if (!args[0]) return message.channel.send("Please input your nHentai link/code!");
-                api.getID(args[0]).json(data => {
+                if (isUrl(args[0])) {
+                const pathname = new URL(args[0]).pathname;
+                nhentaiApi.g(pathname.split("/")[2]).then(async (manga) => {
                         axios({
                                 method: 'post',
                                 url: 'https://chiyome.ninja/api/url/add',
@@ -22,7 +25,7 @@ module.exports = {
                                         'Content-Type': 'application/json'
                                 },
                                 data: {
-                                        "url": `https://mangadl.herokuapp.com/download/nhentai/${data.id}/zip`
+                                        "url": `http://mangadl.rei.my.id/download/nhentai/${pathname.split("/")[2]}/zip`
                                 }
                                 })
                                 .then(function (response) {
@@ -35,24 +38,24 @@ module.exports = {
                                                         'Content-Type': 'application/json'
                                                 },
                                                 data: {
-                                                        "url": `https://mangadl.herokuapp.com/download/nhentai/${data.id}/cbz`
+                                                        "url": `http://mangadl.rei.my.id/download/nhentai/${pathname.split("/")[2]}/cbz`
                                                 }
                                                 })
                                                 .then(function (responsx) {
                                                         console.log(responsx.data);
                                                         const embed = new MessageEmbed()
                                                         .setColor(client.config.app.color)
-                                                        .setTitle(data.title.translated || ' ')
-                                                        .setDescription(data.title.origin || ' ')
-                                                        .addField('Tags :', `${data.tag_table.tag || 'none'}`, false)
-                                                        .addField('Artists :', `${data.tag_table.artist || 'none'}`, true)
-                                                        .addField('Groups :', `${data.tag_table.groups || 'none'}`, true)
-                                                        .addField('Languages :', `${data.tag_table.languages || 'none'}`, true)
-                                                        .addField('Categories :', `${data.tag_table.categories || 'none'}`, true)
-                                                        .addField('Pages :', `${data.number_pages || 'none'}`, true)
-                                                        .addField('Uploaded :', `${data.uploaded || 'none'}`, true)
+                                                        .setTitle(`${manga.title.main_title.before} ${manga.title.main_title.pretty} ${manga.title.main_title.after}`)
+                                                        .setDescription(`${manga.title.sub_title.before} ${manga.title.sub_title.pretty} ${manga.title.sub_title.after}`)
+                                                        .addField('Tags :', `${manga.tags.join(", ") || "none"}`, false)
+                                                        .addField('Artists :', `${manga.artists.join(", ") || 'none'}`, true)
+                                                        .addField('Groups :', ` ${manga.groups.join(", ") || 'none'}`, true)
+                                                        .addField('Languages :', `${manga.languages.join(", ") || 'none'}`, true)
+                                                        .addField('Categories :', `${manga.categories.join(", ") || 'none'}`, true)
+                                                        .addField('Pages :', `${manga.pages || 'none'}`, true)
+                                                        .addField('Uploaded :', `${manga.uploaded || 'none' ? moment(manga.uploaded).format("MMMM Do YYYY, h:mm:ss a") : 'none'}`, true)
                                                         .addField('Download:', `[ZIP](${response.data.short}) - [CBZ](${responsx.data.short})`, false)
-                                                        .setImage(data.images.cover)
+                                                        .setImage(`${manga.thumbnail}`)
                                                         message.channel.send({ embeds: [embed] });
                                                 })
                                                 .catch(function (error) {
@@ -63,5 +66,57 @@ module.exports = {
                                         console.log(error);
                                 });
                 })
+        } else {
+                nhentaiApi.g(args[0]).then(async (manga) => {
+                        axios({
+                                method: 'post',
+                                url: 'https://chiyome.ninja/api/url/add',
+                                headers: {
+                                        'Authorization': `Token ${client.config.key.chiyomeAPIKey}`,
+                                        'Content-Type': 'application/json'
+                                },
+                                data: {
+                                        "url": `http://mangadl.rei.my.id/download/nhentai/${args[0]}/zip`
+                                }
+                                })
+                                .then(function (response) {
+                                        console.log(response.data);
+                                        axios({
+                                                method: 'post',
+                                                url: 'https://chiyome.ninja/api/url/add',
+                                                headers: {
+                                                        'Authorization': `Token ${client.config.key.chiyomeAPIKey}`,
+                                                        'Content-Type': 'application/json'
+                                                },
+                                                data: {
+                                                        "url": `http://mangadl.rei.my.id/download/nhentai/${args[0]}/cbz`
+                                                }
+                                                })
+                                                .then(function (responsx) {
+                                                        console.log(responsx.data);
+                                                        const embed = new MessageEmbed()
+                                                        .setColor(client.config.app.color)
+                                                        .setTitle(`${manga.title.main_title.before} ${manga.title.main_title.pretty} ${manga.title.main_title.after}`)
+                                                        .setDescription(`${manga.title.sub_title.before} ${manga.title.sub_title.pretty} ${manga.title.sub_title.after}`)
+                                                        .addField('Tags :', `${manga.tags.join(", ") || "none"}`, false)
+                                                        .addField('Artists :', `${manga.artists.join(", ") || 'none'}`, true)
+                                                        .addField('Groups :', ` ${manga.groups.join(", ") || 'none'}`, true)
+                                                        .addField('Languages :', `${manga.languages.join(", ") || 'none'}`, true)
+                                                        .addField('Categories :', `${manga.categories.join(", ") || 'none'}`, true)
+                                                        .addField('Pages :', `${manga.pages || 'none'}`, true)
+                                                        .addField('Uploaded :', `${manga.uploaded || 'none' ? moment(manga.uploaded).format("MMMM Do YYYY, h:mm:ss a") : 'none'}`, true)
+                                                        .addField('Download:', `[ZIP](${response.data.short}) - [CBZ](${responsx.data.short})`, false)
+                                                        .setImage(`${manga.thumbnail}`)
+                                                        message.channel.send({ embeds: [embed] });
+                                                })
+                                                .catch(function (error) {
+                                                        console.log(error);
+                                                });
+                                })
+                                .catch(function (error) {
+                                        console.log(error);
+                                });
+                })
+        }
         },
 };
