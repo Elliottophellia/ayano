@@ -22,9 +22,9 @@ http://status.rei.my.id/
 - [x] shortlink for nhentai download powered by https://chiyome.ninja/ (add it to other download as well)
 - [x] fix music command bug can't play anything
 - [x] sync my music command to [ZerioDev](https://github.com/ZerioDev/Music-bot) new update
-- [ ] kasu.nhentaiapi.js removed and changed to simple-nhentai
+- [x] kasu.nhentaiapi.js removed and changed to simple-nhentai
 - [ ] fix tiktok downloader or change it to other function
-- [ ] fix youtube mp3 downloader or change it to other function
+- [x] fix youtube mp3 downloader or change it to other function
 
 please someone contribute im to lazy to do this
 
@@ -56,8 +56,14 @@ module.exports = {
         discordPlayer: {            
             ytdlOptions: {
             quality: 'highestaudio',
-            highWaterMark: 1 << 25
+            highWaterMark: 1 << 25,
+            filter: 'audioonly',
+            requestOptions: {
+            headers: {
+            cookie: 'YOUTUBE_LOGIN_COOKIE'
+             }
             }
+          }
         }
     },
 
