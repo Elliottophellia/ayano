@@ -16,21 +16,38 @@ module.exports = {
     var id = getYouTubeID(args[0]);
     var options = {
         method: 'GET',
-        url: 'https://youtube-to-mp32.p.rapidapi.com/api/yt_to_mp3',
-        params: {video_id: `${id}`},
-        headers: {
-          'x-rapidapi-host': 'youtube-to-mp32.p.rapidapi.com',
-          'x-rapidapi-key': client.config.key.rapidAPI
-        }
+        url: 'http://youtube.rei.my.id/api/v1/getInfo/',
+        params: {url: `${id}`},
       };
       axios.request(options)
       .then(function (response) {
-          const embed = new MessageEmbed();
-          embed.setTitle('**'+response.data.Title+'**')
-          embed.addField(`**❱ DOWNLOAD**`,`**[AUDIO](${response.data.Download_url})**`, true);
-          embed.setThumbnail(response.data.Video_Thumbnail)
-          embed.setColor(client.config.app.color);
-          message.channel.send({ embeds: [embed] });
+        axios({
+          method: 'post',
+          url: 'https://chiyome.ninja/api/url/add',
+          headers: {
+                  'Authorization': `Token ${client.config.key.chiyomeAPIKey}`,
+                  'Content-Type': 'application/json'
+          },
+          data: {
+                  "url": `http://youtube.rei.my.id/api/v1/audio?url=${id}`
+          }
+          })
+          .then(function (responsx) { 
+            let tamnel = '';
+            response.data.videoDetails.thumbnails.forEach(al => {
+              tamnel += `${al.url}`;
+            });
+            const embed = new MessageEmbed();
+            embed.setTitle('**'+response.data.videoDetails.title+'**')
+            embed.setThumbnail(response.data.videoDetails.author.thumbnails[0].url)
+            embed.addField(`**❱ DOWNLOAD**`,`**[MP3](${responsx.data.short})**`, true);
+            embed.setImage(response.data.videoDetails.thumbnails[1].url)
+            embed.setColor(client.config.app.color);
+            message.channel.send({ embeds: [embed] });
+          } )
+          .catch(function (errox) {
+            console.log(errox);
+          });
       })
       .catch(function (error) {
           console.error(error);
