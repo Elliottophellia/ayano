@@ -25,7 +25,7 @@ http://status.rei.my.id/
 - [x] fix music command bug can't play anything
 - [x] sync my music command to [ZerioDev](https://github.com/ZerioDev/Music-bot) new update
 - [x] kasu.nhentaiapi.js removed and changed to simple-nhentai
-- [ ] fix tiktok downloader or change it to other function
+- [x] fix tiktok downloader or change it to other function
 - [x] fix youtube mp3 downloader or change it to other function
 
 # Config
@@ -671,5 +671,5 @@ List of commands that Sugiura ayano have
 - [weather-js | ^2.0.0](https://www.npmjs.com/package/weather-js)
 - [is-image-url | ^1.1.8](https://www.npmjs.com/package/is-image-url)
 - [deepai | ^1.0.17](https://www.npmjs.com/package/deepai)
-- [fxc7-tiktok | ^1.0.2](https://www.npmjs.com/package/fxc7-tiktok)
+- [tiktok-scraper | ^1.4.36](https://www.npmjs.com/package/tiktok-scraper)
 - [sagiri | ^3.1.1](https://www.npmjs.com/package/sagiri)
