@@ -13,7 +13,9 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
-# 1.0.1 To do
+# Changelog
+
+## 1.0.1 [underdevelopment]
 
 - [x] add notice to include agent name when use valagent command
 - [x] change wheater command from using args[1] to args.slice(1).join(' ')
@@ -25,8 +27,6 @@ http://status.rei.my.id/
 - [x] kasu.nhentaiapi.js removed and changed to simple-nhentai
 - [ ] fix tiktok downloader or change it to other function
 - [x] fix youtube mp3 downloader or change it to other function
-
-please someone contribute im to lazy to do this
 
 # Config
 ```javascript
