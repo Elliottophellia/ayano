@@ -29,7 +29,7 @@ module.exports = {
                   'Content-Type': 'application/json'
           },
           data: {
-                  "url": `http://youtube.rei.my.id/api/v1/audio?url=${id}`
+                  "url": `http://youtube.rei.my.id:4000/api/v1/audio?url=${id}`
           }
           })
           .then(function (responsx) { 
