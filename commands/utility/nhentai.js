@@ -25,7 +25,7 @@ module.exports = {
                                         'Content-Type': 'application/json'
                                 },
                                 data: {
-                                        "url": `http://mangadl.rei.my.id:55674/download/nhentai/${pathname.split("/")[2]}/zip`
+                                        "url": `http://mangadl.rei.my.id/download/nhentai/${pathname.split("/")[2]}/zip`
                                 }
                                 })
                                 .then(function (response) {
@@ -38,7 +38,7 @@ module.exports = {
                                                         'Content-Type': 'application/json'
                                                 },
                                                 data: {
-                                                        "url": `http://mangadl.rei.my.id:55674/download/nhentai/${pathname.split("/")[2]}/cbz`
+                                                        "url": `http://mangadl.rei.my.id/download/nhentai/${pathname.split("/")[2]}/cbz`
                                                 }
                                                 })
                                                 .then(function (responsx) {
