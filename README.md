@@ -15,7 +15,7 @@ http://status.rei.my.id/
 
 # Changelog
 
-## 1.0.1 [underdevelopment]
+## 1.0.1 [BETA]
 
 - [x] add notice to include agent name when use valagent command
 - [x] change wheater command from using args[1] to args.slice(1).join(' ')
