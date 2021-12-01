@@ -27,7 +27,7 @@ http://status.rei.my.id/
 - [x] kasu.nhentaiapi.js removed and changed to simple-nhentai
 - [x] fix tiktok downloader or change it to other function
 - [x] fix youtube mp3 downloader or change it to other function
-- [ ] change facebook video downloader command to twitter/instagram video downloader
+- [x] change facebook video downloader command to twitter/instagram video downloader
 
 # Config
 ```javascript
@@ -303,10 +303,10 @@ List of commands that Sugiura ayano have
                         <td class="tg-0lax">warnain, colorized</td>
                     </tr>
                     <tr>
-                        <td class="tg-0lax">facebook</td>
-                        <td class="tg-0lax">facebook video downloader</td>
-                        <td class="tg-0lax">a!facebook [url]</td>
-                        <td class="tg-0lax">fbdl</td>
+                        <td class="tg-0lax">twitter</td>
+                        <td class="tg-0lax">twitter video downloader</td>
+                        <td class="tg-0lax">a!twitter [url]</td>
+                        <td class="tg-0lax">twdl</td>
                     </tr>
                     <tr>
                         <td class="tg-0lax">mal</td>
@@ -664,7 +664,7 @@ List of commands that Sugiura ayano have
 - [is-valid-http-url | ^1.0.3](https://www.npmjs.com/package/is-valid-http-url)
 - [discord-gamecord | ^2.0.0](https://www.npmjs.com/package/discord-gamecord)
 - [get-youtube-id | ^1.0.1](https://www.npmjs.com/package/get-youtube-id)
-- [fbvideos | ^1.0.2](https://www.npmjs.com/package/fbvideos)
+- [twitter-url-direct | ^1.0.1](https://www.npmjs.com/package/twitter-url-direct)
 - [simple-nhentai | ^1.0.5](https://www.npmjs.com/package/simple-nhentai)
 - [valorant-fetch": ^3.1.1](https://www.npmjs.com/package/valorant-fetch)
 - [moment | ^2.29.1](https://www.npmjs.com/package/moment)
