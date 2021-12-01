@@ -652,6 +652,7 @@ List of commands that Sugiura ayano have
 - [Henrik-3](https://github.com/Henrik-3/unofficial-valorant-api)
 - [llsc12](https://github.com/llsc12/download-api)
 - [OblivionGhoul](https://github.com/OblivionGhoul/KannaKamuiBot/tree/discord.js-v13/commands/commands/valorant)
+- [moedevel](https://github.com/moedevel/mangadl)
 
 # Modules
 - [discord.js | ^13.1.0](https://www.npmjs.com/package/discord.js)
