@@ -16,7 +16,7 @@ module.exports = {
     var id = getYouTubeID(args[0]);
     var options = {
         method: 'GET',
-        url: 'http://youtube.rei.my.id:4000/api/v1/getInfo/',
+        url: 'http://youtube.rei.my.id/api/v1/getInfo/',
         params: {url: `${id}`},
       };
       axios.request(options)
@@ -29,7 +29,7 @@ module.exports = {
                   'Content-Type': 'application/json'
           },
           data: {
-                  "url": `http://youtube.rei.my.id:4000/api/v1/download?url=${id}`
+                  "url": `http://youtube.rei.my.id/api/v1/download?url=${id}`
           }
           })
           .then(function (responsx) { 
