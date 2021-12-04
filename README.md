@@ -13,22 +13,6 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
-# Changelog
-
-## 1.0.1 [BETA]
-
-- [x] add notice to include agent name when use valagent command
-- [x] change wheater command from using args[1] to args.slice(1).join(' ')
-- [x] idk why but weky module is kinda buging in my vps (the bug is you can't add mention user directly but make it to be variable first )
-- [x] add cbz format for nhentai download
-- [x] shortlink for nhentai download powered by https://chiyome.ninja/ (add it to other download as well)
-- [x] fix music command bug can't play anything
-- [x] sync my music command to [ZerioDev](https://github.com/ZerioDev/Music-bot) new update
-- [x] kasu.nhentaiapi.js removed and changed to simple-nhentai
-- [x] fix tiktok downloader or change it to other function
-- [x] fix youtube mp3 downloader or change it to other function
-- [x] change facebook video downloader command to twitter/instagram video downloader
-
 # Config
 ```javascript
 module.exports = {
