@@ -13,9 +13,14 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
+<!--
 # Chagelog
 ## 1.0.2
-- [ ] Fix Slap/Kiss/Hug image did not display in embed message discord
+- [x] Fix Slap/Kiss/Hug image did not display in embed message discord
+  FIXED BY CHANGING THE KYOKO API RESULT TO CND SERVER
+  https://github.com/Eilaluth/Kyoko/commit/7177e4fff4b7152cf4f6f5dc88c391adc62dba0e
+
+-->
 
 # Config
 ```javascript
