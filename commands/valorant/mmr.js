@@ -12,7 +12,7 @@ module.exports = {
     let tag = args[1]
     let region = args[2]
     if (!args[0] || !args[1]) {
-        message.channel.send('Please specify your riot id correctly without a hashtag or space. (usage: a!valmmr [name] [tag] [region])')
+        return message.channel.send('Please specify your riot id correctly without a hashtag or space. (usage: a!valmmr [name] [tag] [region])')
     }
     if (!region) {
         region = 'AP'
