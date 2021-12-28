@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const { GuessThePokemon } = require("weky");
+const { GuessThePokemon } = require('discord-gamecord')
 
 module.exports = {
     name: 'pokemon',
@@ -9,24 +9,19 @@ module.exports = {
     description: 'Play guess the pokemon game on discord',
 
     async execute(client, message, args){
-        await GuessThePokemon({
+        new GuessThePokemon({
             message: message,
+            slash_command: false,
             embed: {
-                title: 'Guess The Pokémon',
-                description:
-                    '**Type:**\n{{type}}\n\n**Abilities:**\n{{abilities}}\n\nYou only have **{{time}}** to guess the pokémon.',
-                color: client.config.app.color,
-                footer: 'Guess The Pokemon on discord',
-                timestamp: true
+              title: 'Who\'s This Pokemon?',
+              footer: 'You have only 1 chance',
+              color: client.config.app.color,
             },
-            thinkMessage: 'I am thinking',
-            othersMessage: 'Only <@{{author}}> can use the buttons!',
-            winMessage:
-                'GG, It was a **{{answer}}**. You got it correct in **{{time}}**.',
-            loseMessage: 'Better luck next time! It was a **{{answer}}**.',
             time: 60000,
-            incorrectMessage: "No {{author}}! The pokémon isn't `{{answer}}`",
-            buttonText: 'Cancel'
-        });
+            thinkMessage: '**Thinking...**',
+            winMessage: 'Nice! The pokemon was **{pokemon}**',
+            stopMessage: 'Better luck next time! It was a **{pokemon}**',
+            incorrectMessage: 'Nope! The pokemon was **{pokemon}**',
+          }).startGame();
     },
 };
