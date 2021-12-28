@@ -11,6 +11,7 @@ module.exports = {
     async execute(client, message, args){
         const mess = message;
         const opps = message.mentions.users.first();
+        if(!opps) return message.channel.send("Please mention a user to fight with you!.");
         await Fight({
             message: mess,
             opponent: opps,
