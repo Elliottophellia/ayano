@@ -20,7 +20,7 @@ module.exports = {
         message.channel.send({ embeds: [ascent]})
     }
 
-    if (mapName.includes('bind')) {
+    else if (mapName.includes('bind')) {
         const bind = new MessageEmbed()
 
             .addField('BIND','[DETAILS](https://blitz.gg/valorant/maps/bind)',true)
@@ -30,7 +30,7 @@ module.exports = {
         message.channel.send({ embeds: [bind]})
     }
 
-    if (mapName.includes('haven')) {
+    else if (mapName.includes('haven')) {
         const haven = new MessageEmbed()
 
             .addField('HAVEN','[DETAILS](https://blitz.gg/valorant/maps/haven)',true)
@@ -40,7 +40,7 @@ module.exports = {
         message.channel.send({ embeds: [haven]})
     }
 
-    if (mapName.includes('split')) {
+    else if (mapName.includes('split')) {
         const split = new MessageEmbed()
 
             .addField('SPLIT','[DETAILS](https://blitz.gg/valorant/maps/split)',true)
@@ -50,7 +50,7 @@ module.exports = {
         message.channel.send({ embeds: [split]})
     }
 
-    if (mapName.includes('ice') || mapName.includes('box')) {
+    else if (mapName.includes('ice') || mapName.includes('box')) {
         const icebox = new MessageEmbed()
 
             .addField('ICE BOX','[DETAILS](https://blitz.gg/valorant/maps/icebox)',true)
@@ -60,7 +60,7 @@ module.exports = {
         message.channel.send({ embeds: [icebox]})
     }
 
-    if (mapName.includes('breeze')) {
+    else if (mapName.includes('breeze')) {
         const split = new MessageEmbed()
 
             .addField('BREEZE','[DETAILS](https://blitz.gg/valorant/maps/breeze)',true)
@@ -70,7 +70,7 @@ module.exports = {
         message.channel.send({ embeds: [split]})
     }
 
-    if (mapName.includes('fracture')) {
+    else if (mapName.includes('fracture')) {
         const split = new MessageEmbed()
 
             .addField('FRACTURE','[DETAILS](https://blitz.gg/valorant/maps/fracture)',true)
@@ -78,6 +78,9 @@ module.exports = {
             .setColor(client.config.app.color)
 
         message.channel.send({ embeds: [split]})
+    }
+    else {
+        message.channel.send('Theres no map with that name!')
     }
   },
 };
