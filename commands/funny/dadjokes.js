@@ -1,19 +1,18 @@
 const axios = require("axios");
 
 module.exports = {
-    name: 'geekjokes',
+    name: 'dadjokes',
     category: 'funny',
-    aliases: ['geek'],
-    utilisation: '{prefix}geekjokes',
-    description: 'Random geek jokes',
+    aliases: ['dad', 'dadjoke'],
+    utilisation: '{prefix}dadjokes',
+    description: 'Random dad jokes',
 
     async execute(client, message, args){
-        axios.get(`https://geek-jokes.p.rapidapi.com/api`, {
-            params: {format: 'json'},
-            headers: {
-              'x-rapidapi-host': 'geek-jokes.p.rapidapi.com',
-              'x-rapidapi-key': client.config.key.rapidAPI
-            }
+        axios.get("https://icanhazdadjoke.com/", {
+          headers: {
+            "User-Agent": "Ayano Sugiura (https://github.com/Eilaluth/ayano)",
+            "accept": "application/json",
+          },
         })
         .then(function (res) {
                 message.channel.send(`${res.data.joke}`)
