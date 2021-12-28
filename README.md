@@ -14,9 +14,12 @@ Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
 # Chagelog
+
+Release version will be avaible in 3day after test
+
 ## 1.0.2
-- [x] No Update Only Fix Bug
-- [ ] Update Node Module Version And Adjustment
+- [x] No Update Feature Only Fix Bug
+- [x] Update Node Module Version And Adjustment
 
 # Config
 ```javascript
