@@ -15,11 +15,11 @@ http://status.rei.my.id/
 
 # Chagelog
 
-Release version will be avaible in 3day after test
 
-## 1.0.2
-- [x] No Update Feature Only Fix Bug
-- [x] Update Node Module Version And Adjustment
+
+
+
+
 
 # Config
 ```javascript
