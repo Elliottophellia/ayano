@@ -13,7 +13,7 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
-# Chagelog
+
 
 
 
