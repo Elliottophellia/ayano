@@ -13,8 +13,11 @@ Ayano has a tsundere type personality and this shows when she gets embarrassed a
 Website Monitoring to check if BOT server is down or not<br/>
 http://status.rei.my.id/
 
-# Known Issue [1.0.2]
-- [ ] Music player can't play any music when the voice channel bitrate is 320Kbps
+# 1.0.3 to do
+- [ ] Add Info About New Valorant Agent NEON
+- [ ] Detail Help Menu
+- [ ] Improvement With Saucenao Command
+- [ ] Improvement With Covid-19 Command
 
 # Config
 ```javascript
