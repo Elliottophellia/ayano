@@ -16,6 +16,38 @@ http://status.rei.my.id/
 # 1.0.3 to do
 - [ ] Add Info About New Valorant Agent NEON
 - [ ] Detail Help Menu
+```
+a!help --- >
+   |------------------------------------------------|
+   |           Ayano Sugiura Help Menu              |
+   |                                                |
+   | There's are six commands menu that you can use |
+   |                                                |
+   | 1. INFORMATION - 6                             |
+   | 2. MODERATOR - 6                               |
+   | 3. VALORANT - 6                                |
+   | 4. UTILITY - 17                                |
+   | 5. FUNNY - 17                                  |
+   | 6. MUSIC - 17                                  |
+   |                                                |
+   | Use : a!help [menu/number] to see details      |
+   |------------------------------------------------|
+a!help moderation/2 --- >
+   |------------------------------------------------|
+   |          Moderator Commands Menu               |
+   |                                                |
+   | 1. ban                                         |
+   | 2. kick                                        |
+   | 3. mute                                        |
+   | 4. purge                                       |
+   | 5. say                                         |
+   | 6. unmute                                      |
+   |                                                |
+   | Use : a!help 2 [menu/number] to see details    |
+   |------------------------------------------------|
+
+
+```
 - [ ] Improvement With Saucenao Command
 - [ ] Improvement With Covid-19 Command
 
