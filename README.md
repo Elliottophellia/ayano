@@ -67,7 +67,7 @@ module.exports = {
         saucenaoAPI: '',
         deepaiAPIKey: '',
         imgbbAPIKey: '',
-        chiyomeAPIKey: ''
+        chiyomeAPIKey: '' // https://github.com/Eilaluth/ayano/issues/3
     }
 };
 
