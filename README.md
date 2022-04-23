@@ -1,7 +1,4 @@
-# Need contributor!!!
-## my schedule is kinda busy with studying for exam so i cannot make any updates for this past 3 month.
-
-<div align="center"><img src="https://raw.githubusercontent.com/Eilaluth/Ayano/main/img/ayanoxkyoko.png" /></div>
+<div align="center"><h1>CODE WILL BE REWRITTEN IN MAY, PLEASE DONT USE CURRENT CODE ON YOUR BOT CUS IT WILL BE FULL OF BUG</h1><img src="https://raw.githubusercontent.com/Eilaluth/Ayano/main/img/ayanoxkyoko.png" /></div>
 
 # Sugiura Ayano
 
