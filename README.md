@@ -1,4 +1,7 @@
-<div align="center"><h1>CODE WILL BE REWRITTEN IN MAY, PLEASE DONT USE CURRENT CODE ON YOUR BOT CUS IT WILL BE FULL OF BUG</h1><img src="https://raw.githubusercontent.com/Eilaluth/Ayano/main/img/ayanoxkyoko.png" /></div>
+<div align="center">
+<img src="https://i.ibb.co/6XCqNK1/2022-05-28-16-08-11-Window.png" />
+<h2>Project Moved To Private Organizations, Repository Will Be Opened to Public Around July</h1>
+</div>
 
 # Sugiura Ayano
 
